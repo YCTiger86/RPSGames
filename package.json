@@ -1,0 +1,9 @@
+{
+  "name": "kleague1-2026-records",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 4173",
+    "update:data": "node scripts/update-data.mjs"
+  }
+}

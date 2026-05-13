@@ -1,0 +1,27 @@
+name: Update K League Data
+
+on:
+  schedule:
+    - cron: '10 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm run update:data
+        env:
+          DATA_SOURCE_URL: ${{ secrets.DATA_SOURCE_URL }}
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/kleague1-2026.json
+          git diff --cached --quiet || git commit -m "chore: update K리그1 2026 데이터"
+          git push
