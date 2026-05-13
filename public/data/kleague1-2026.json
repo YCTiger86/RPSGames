@@ -1,0 +1,27 @@
+{
+  "season": 2026,
+  "competition": "K League 1",
+  "updatedAt": "2026-05-13T00:00:00.000Z",
+  "matches": [
+    {
+      "kickoff": "2026-03-01T05:00:00Z",
+      "round": "1R",
+      "homeTeam": "FC서울",
+      "awayTeam": "울산 HD",
+      "homeScore": 1,
+      "awayScore": 1,
+      "venue": "서울월드컵경기장",
+      "status": "FINISHED"
+    },
+    {
+      "kickoff": "2026-03-01T07:30:00Z",
+      "round": "1R",
+      "homeTeam": "전북현대",
+      "awayTeam": "포항스틸러스",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "전주월드컵경기장",
+      "status": "SCHEDULED"
+    }
+  ]
+}
